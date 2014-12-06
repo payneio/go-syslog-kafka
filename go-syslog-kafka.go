@@ -97,7 +97,7 @@ func main() {
 	server := syslog.NewServer()
 	server.SetFormat(syslog.RFC5424)
 	server.SetHandler(handler)
-	server.ListenUDP(connUdpHost)
+	server.ListenUDP(udpIface)
 	server.Boot()
 
 	// Connect to Kafka
